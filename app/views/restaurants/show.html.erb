@@ -1,0 +1,15 @@
+<h1>Restaurant <%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+<table>
+  <tbody>
+    <% @restaurant.reviews.each do |review| %>
+      <tr>
+        <td><%= review.content %></td>
+        <td><%= review.rating %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Back', restaurants_path %>
